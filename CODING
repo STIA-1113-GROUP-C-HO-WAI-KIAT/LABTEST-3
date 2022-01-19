@@ -1,5 +1,8 @@
 package QUIZ;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.ArrayList;
 public class LABTEST1 {
 
@@ -15,37 +18,33 @@ public class LABTEST1 {
 		    int x = sc.nextInt();
 
 		    System.out.println("Type " + x + " words:");
-		    ArrayList<String> name = new ArrayList<>();
+		    ArrayList<String> words = new ArrayList<>();
 		    for(int i = 0; i < x; i++) {
-		        name.add(sc.next());
+		        words.add(sc.next());
 		    }
-
-
-		    ArrayList<String> numbers = comeback(name);
-		    for (String words: numbers) {
-		        int a = count(name, words);
-		        System.out.println(words + ": " + a);
-		    }}
+		    arrayCount(words, x);
+		}}
+		
+		static void arrayCount (ArrayList<String> words, int x) {
+			
+			Map<String, Integer> count = new HashMap<String, Integer>();
+			
+			for(String word: words) {
+				if(count.containsKey(word)) {
+					count.put(word, count.get(word)+1);
+				}
+				else {
+					count.put(word,1);
+				}
+			}
+			
+			Set<String> wordString = count.keySet();
+			
+			for(String word: wordString) {
+				if(count.get(word)>0) {
+					System.out.println(word + " : " + count.get(word));
+				}
+			}
 		}
 
-		public static int count(ArrayList<String> numbers, String words) {
-		    int i1 = 0;
-		    for (String a: numbers) {
-		        if (a.equals(words)) {
-		            i1++;
-		        }
-		    }
-		    return i1;
-		}
-
-		public static ArrayList<String> comeback(ArrayList<String> uti) {
-		    ArrayList<String> comeback = new ArrayList<>();
-		    for(String s: uti) {
-		        if (! comeback.contains(s)) {
-		        	comeback.add(s);
-		        }
-		    }
-		    return comeback;
-		}
-		}
-
+	}
