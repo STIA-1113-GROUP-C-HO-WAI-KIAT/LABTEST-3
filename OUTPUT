@@ -1,0 +1,13 @@
+How many words do you want to enter?
+6
+Enter 6 words:
+HELLO
+WORLD
+HELLO
+GERMANY
+HELLO
+BERLIN
+HELLO: 3
+WORLD: 1
+GERMANY: 1
+BERLIN: 1
