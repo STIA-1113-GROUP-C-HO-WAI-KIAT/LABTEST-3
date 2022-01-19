@@ -1,13 +1,13 @@
-How many words do you want to enter?
+Enter the number of the words
 6
 Enter 6 words:
-HELLO
-WORLD
-HELLO
-GERMANY
-HELLO
-BERLIN
-HELLO: 3
-WORLD: 1
-GERMANY: 1
-BERLIN: 1
+hello
+world
+hello
+germany
+hello
+berlin
+hello: 3
+world: 1
+germany: 1
+berlin: 1
